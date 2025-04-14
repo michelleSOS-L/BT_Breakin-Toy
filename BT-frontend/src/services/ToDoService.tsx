@@ -21,3 +21,6 @@ export const deleteToDo=(id:number)=>{
 export const getPaginatedToDos = (page: number, size: number) => {
     return axios.get(`${REST_API_BASE_URL}/paginated?page=${page}&size=${size}`);
   };
+  export const getAllToDos=()=>{
+    return axios.get<ToDo[]>(`${REST_API_BASE_URL}/all`);
+  };

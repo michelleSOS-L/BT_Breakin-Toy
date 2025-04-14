@@ -13,23 +13,39 @@ const EditModal: React.FC<Props> = ({ todo, onClose, onSave }) => {
   const [priority, setPriority] = useState(todo.priority);
 
   const handleSave = () => {
+    const trimmedText = text.trim();
+    const today = new Date().setHours(0, 0, 0, 0);
+    const selectedDate = new Date(dueDate).setHours(0, 0, 0, 0);
+  
+    if (trimmedText.length >= 100) {
+      alert("Task name must be 100 characters or fewer.");
+      return;
+    }
+  
+    if (selectedDate < today) {
+      alert("Are you going back in time?!");
+      return;
+    }
+  
+    const originalDate = todo.dueDate?.split("T")[0] ?? "";
     if (
-      text === todo.text &&
-      dueDate === (todo.dueDate?.split("T")[0] ?? "") &&
+      trimmedText === todo.text &&
+      dueDate === originalDate &&
       priority === todo.priority
     ) {
       alert("No changes made.");
       return;
     }
-
+  
     if (!window.confirm("Are you sure you want to apply these changes?")) return;
-
+  
     const updated: ToDo = {
       ...todo,
-      text,
-      dueDate:new Date(dueDate).toISOString(),
+      text: trimmedText,
+      dueDate: new Date(dueDate).toISOString(),
       priority,
     };
+  
     onSave(updated);
   };
 
