@@ -1,7 +1,6 @@
 # Breakable Toy I : To DO Application
 
 
-Welcome to BreakableToy1TodoApplication!
 
 This is a full-stack to-do app built with TypeScript, React, Vite and Java Maven with SpringBoot. Whether you’re here to check things off or just check things out — you’re in the right place!
 
