@@ -1,0 +1,10 @@
+/Users/michel.leandro/Documents/BT/src/main/java/Breakable_Toy/BT/BtApplication.java
+/Users/michel.leandro/Documents/BT/src/main/java/Breakable_Toy/BT/controller/ToDoController.java
+/Users/michel.leandro/Documents/BT/src/main/java/Breakable_Toy/BT/dto/CompletionStatsDto.java
+/Users/michel.leandro/Documents/BT/src/main/java/Breakable_Toy/BT/dto/ToDoDto.java
+/Users/michel.leandro/Documents/BT/src/main/java/Breakable_Toy/BT/exception/ResourceNotFoundException.java
+/Users/michel.leandro/Documents/BT/src/main/java/Breakable_Toy/BT/mapper/ToDoMapper.java
+/Users/michel.leandro/Documents/BT/src/main/java/Breakable_Toy/BT/repository/ToDoRepo.java
+/Users/michel.leandro/Documents/BT/src/main/java/Breakable_Toy/BT/service/ToDoService.java
+/Users/michel.leandro/Documents/BT/src/main/java/Breakable_Toy/BT/service/impl/ToDoServiceImpl.java
+/Users/michel.leandro/Documents/BT/src/main/java/Breakable_Toy/BT/todo/ToDo.java
