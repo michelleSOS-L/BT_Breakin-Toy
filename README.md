@@ -53,11 +53,11 @@ The backend will run by default on http://localhost:9090
 ⸻
 
 Quick Tips 💡
-	•	Make sure both frontend and backend are running at the same time for full functionality.
+•	Make sure both frontend and backend are running at the same time for full functionality.
  
-	•	The project uses Bootstrap.
+•	The project uses Bootstrap.
  
-	•	Filtering, sorting, pagination, editing, and even task stats are all built in — explore the UI!
+•	Filtering, sorting, pagination, editing, and even task stats are all built in — explore the UI!
 
 ⸻
 
