@@ -16,20 +16,20 @@ You’ll find two main folders in this repo:
 
 Running the Project Locally Frontend Setup ✨
 
-	1.	Navigate into the frontend folder:
+1.	Navigate into the frontend folder:
 
-cd BREAKABLETOY_FE/BT-frontend
+	cd BREAKABLETOY_FE/BT-frontend
 
 
-	2.	Install the dependencies (you’ll need Node.js installed):
+2.	Install the dependencies (you’ll need Node.js installed):
  
 
-npm install
+	npm install
 
 
-	3.	Start the dev server:
+3.	Start the dev server:
 
-npm run dev
+	npm run dev
 
 
 The frontend will run by default on http://localhost:8080
@@ -38,14 +38,14 @@ The frontend will run by default on http://localhost:8080
 
 Backend Setup ☕️
 
-	1.	Navigate into the backend folder:
+1.	Navigate into the backend folder:
 
-cd BT/main
+	cd BT/main
 
 
-	2.	Run the Spring Boot app (requires Java + Maven installed):
+2.	Run the Spring Boot app (requires Java + Maven installed):
 
-mvn spring-boot:run
+	mvn spring-boot:run
 
 
 The backend will run by default on http://localhost:9090
