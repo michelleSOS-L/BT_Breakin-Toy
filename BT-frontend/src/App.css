@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
 #root {
-  max-width: 1280px;
+  max-width: none;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
+  width: 100%;
   text-align: center;
   --color-bg: #162d6b;                  /* Galaxy deep blue */
   --color-panel: #ffffff15;
@@ -26,16 +27,23 @@ body {
 }
 
 .app-background {
-  padding: 2rem;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .card-pretty {
+  width: 100%;
+  max-width: 1000px;
   background-color: var(--color-card);
   border-radius: var(--radius);
   box-shadow: var(--shadow-light);
   padding: 2rem;
   border: 1px solid var(--color-primary);
+  margin: auto;
 }
+
 
 .header-container {
   text-align: center;
@@ -194,6 +202,35 @@ input:focus, select:focus {
   border: 1px solid var(--color-primary);
   border-radius: var(--radius);
   box-shadow: 0 0 20px rgba(203, 165, 243, 0.3);
+}
+
+
+@media (max-width: 768px) {
+  .card-pretty {
+    padding: 1rem;
+  }
+
+  .filter-panel .row {
+    flex-direction: column;
+  }
+
+  .filter-panel .col {
+    width: 100%;
+  }
+
+  .pretty-title {
+    font-size: 1.5rem;
+  }
+
+  .stats-panel {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+
+  .table th, .table td {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
 }
 
 

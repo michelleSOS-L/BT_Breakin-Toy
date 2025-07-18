@@ -1,8 +1,8 @@
 import './App.css';
 import HeaderComponent from './components/headerComponent';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import ToDoComponentTbl from './components/ToDoComponentTbl'; // fixed import
-import ToDoComponent from './components/ToDoComponent'; // fixed import
+import ToDoComponentTbl from './components/ToDoComponentTbl'; 
+import ToDoComponent from './components/ToDoComponent'; 
 
 function App() {
   return (

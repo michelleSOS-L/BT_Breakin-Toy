@@ -6,6 +6,8 @@ import {
   getCompletionStats,
   getAllToDos,
 } from "../services/ToDoService";
+import { formatDuration } from "../Utility/timeUtils"; 
+
 import { ToDo } from "./ToDo";
 import { CompletionStats } from "./Stats";
 import ToDoComponent from "./ToDoComponent";
@@ -328,16 +330,36 @@ const ListToDoComponent = () => {
           />
         )}
 
-        <div className="stats-panel mt-5">
-          <h5><strong>Average time to finish tasks:</strong></h5>
-          <p>{stats.find(s => s.priority === "ALL")?.average.toFixed(2) ?? "N/A"} minutes</p>
-          <h5><strong>Average time by priority:</strong></h5>
-          <ul>
-            <li><strong>Low:</strong> {stats.find(s => s.priority === "LOW")?.average.toFixed(2) ?? "N/A"} mins</li>
-            <li><strong>Medium: </strong>{stats.find(s => s.priority === "MEDIUM")?.average.toFixed(2) ?? "N/A"} mins</li>
-            <li><strong>High:</strong> {stats.find(s => s.priority === "HIGH")?.average.toFixed(2) ?? "N/A"} mins</li>
-          </ul>
-        </div>
+<div className="stats-panel mt-5">
+  <h5><strong>Average time to finish tasks:</strong></h5>
+  <p>{stats.find(s => s.priority === "ALL")?.average != null ? formatDuration(stats.find(s => s.priority === "ALL")!.average) : "N/A"}</p>
+
+  <h5><strong>Average time by priority:</strong></h5>
+  <ul>
+    <li style={{ color: "limegreen" }}>
+      <strong>Low:</strong> {
+        stats.find(s => s.priority === "LOW")?.average != null
+          ? formatDuration(stats.find(s => s.priority === "LOW")!.average)
+          : "N/A"
+      }
+    </li>
+    <li style={{ color: "cornsilk" }}>
+      <strong>Medium:</strong> {
+        stats.find(s => s.priority === "MEDIUM")?.average != null
+          ? formatDuration(stats.find(s => s.priority === "MEDIUM")!.average)
+          : "N/A"
+      }
+    </li>
+    <li style={{ color: "crimson" }}>
+      <strong>High:</strong> {
+        stats.find(s => s.priority === "HIGH")?.average != null
+          ? formatDuration(stats.find(s => s.priority === "HIGH")!.average)
+          : "N/A"
+      }
+    </li>
+  </ul>
+</div>
+
       </div>
     </div>
   );
